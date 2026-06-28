@@ -28,4 +28,6 @@ public class AfterLambda {
                 .forEach(name -> System.out.print(name + " "));
         System.out.println();
     }
+
+
 }
