@@ -13,12 +13,10 @@ import java.util.stream.Collectors;
  * parallelStream() tận dụng ForkJoinPool để chia công việc ra nhiều core.
  */
 public class ParallelStreamDemo {
-
     public static void main(String[] args) {
         List<Integer> numbers = IntStream.rangeClosed(1, 1_000_000)
                 .boxed()
-                .collect(Collectors.toList());
-
+                .toList();
         // Sequential stream
         long startSeq = System.currentTimeMillis();
         long sumSeq = numbers.stream()
